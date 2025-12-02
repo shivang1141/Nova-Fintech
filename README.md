@@ -27,58 +27,12 @@ Alternative: deploy from your machine using the Vercel CLI
 
 # Nova Financial
 
-A Vite + React single-page app (SPA) ready to push to GitHub and deploy to Vercel.
+Nova Financial is a single-page application (SPA) built with React and Vite. It shows financial tools and dashboards for portfolio analysis, market data, and planning.
 
-Quick start (PowerShell)
+This repository contains the full source and a production-ready build setup.
 
-1) Install dependencies and run locally
+Run locally: install dependencies and run `npm run dev`. Open `http://localhost:3000/`.
 
-```powershell
-cd "c:\Users\test\Desktop\nova-financial (2)"
-npm install
-npm run dev
-```
+Build for production: `npm run build` (outputs to `dist`).
 
-Open the app at `http://localhost:3000/`.
-
-2) Commit and push to GitHub
-
-```powershell
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<your-repo>.git
-git push -u origin main
-```
-
-3) Deploy to Vercel (recommended)
-
-- Go to https://vercel.com/new and import the GitHub repository you pushed.
-- Vercel will detect a Vite app. Use the defaults or set:
-   - Build Command: `npm run build`
-   - Output Directory: `dist`
-
-Alternative: use the Vercel CLI from your machine
-
-```powershell
-npm i -g vercel
-vercel login
-vercel --prod
-```
-
-Files included for deployment
-
-- `vercel.json` — instructs Vercel to build and serve the `dist` folder and enables SPA routing.
-- `.github/workflows/ci.yml` — optional CI that runs `npm ci` and `npm run build` on push/PR.
-
-Environment variables
-
-- Do not commit `.env` files. Add any secrets via the Vercel dashboard (Project → Settings → Environment Variables).
-
-Troubleshooting
-
-- If the preview URL doesn't load, run `npm run build` locally and check the `dist` output.
-- To stop the local dev server, press `Ctrl+C` in the terminal running `npm run dev`.
-
-If you'd like, I can create the GitHub repository and push the code for you (I will need a GitHub token), or I can run a Vercel CLI deploy — tell me which and I'll proceed.
+Deploy: the project is ready for deployment on Vercel (uses `vercel.json`).
